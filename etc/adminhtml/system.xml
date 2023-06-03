@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="chupaprecios" translate="label" sortOrder="100" class="chp-config-tab-class">
+            <label>Chupaprecios</label>
+        </tab>
+        <section id="chupaprecios_config" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Mi Configuracion</label>
+            <tab>chupaprecios</tab>
+            <resource>Chupaprecios_TechnicalTest::chupaprecios_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="overprice" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Sobreprecio</label>
+                    <comment>Este valor se sumará al precio de los productos.</comment>
+                </field>
+                <field id="shippingcost" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Costo Envío</label>
+                    <comment>Costo de envío disponible en checkout.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

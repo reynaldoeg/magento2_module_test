@@ -1,0 +1,6 @@
+.admin__page-nav.chp-config-tab-class._collapsed ._collapsible strong {
+    content: "";
+    background: url(../images/configtab/icon-logo.png) no-repeat scroll 0 0 transparent;
+    padding-left: 20px;
+}
+
