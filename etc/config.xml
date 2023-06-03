@@ -8,5 +8,17 @@
                 <shippingcost>200</shippingcost>
             </general>
         </chupaprecios_config>
+        <carriers>
+            <simpleshipping>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>ChupaPrecios\TechnicalTest\Model\Carrier\Shipping</model>
+                <name>Chupaprecios</name>
+                <price>150.00</price>
+                <title>Flat Rate</title>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+                <handling_type>F</handling_type>
+            </simpleshipping>
+        </carriers>
     </default>
 </config>
