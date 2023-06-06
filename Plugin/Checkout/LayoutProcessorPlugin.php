@@ -45,6 +45,63 @@ class LayoutProcessorPlugin
         ['children'][$attributeCode] = $fieldConfiguration;
 
 
+        //Select
+        $attributeCode = 'phone_type';
+        $selectConfiguration = [
+            'component' => 'Magento_Ui/js/form/element/select',
+            'config' => [
+                'customScope' => 'shippingAddress.extension_attributes',
+                'customEntry' => null,
+                'template' => 'ui/form/field',
+                'elementTmpl' => 'ui/form/element/select',
+            ],
+            'dataScope' => 'shippingAddress.extension_attributes' . '.' . $attributeCode,
+            'label' => 'Phone Type',
+            'provider' => 'checkoutProvider',
+            'sortOrder' => 950,
+            'validation' => [
+                'required-entry' => true
+            ],
+            'options' => $this->getPhoneTypes(),
+            'filterBy' => null,
+            'customEntry' => null,
+            'visible' => true,
+            'value' => ''
+        ];
+
+        $jsLayout['components']['checkout']['children']
+        ['steps']['children']['shipping-step']['children']
+        ['shippingAddress']['children']['shipping-address-fieldset']
+        ['children'][$attributeCode] = $selectConfiguration;
+
+
         return $jsLayout;
+    }
+
+    /**
+     * Get phone types options
+     *
+     * @return array
+     */
+    protected function getPhoneTypes(): array
+    {
+        return [
+            [
+                'value' => '',
+                'label' => __('-- Please Select --')
+            ],
+            [
+                'value' => 'Mobile',
+                'label' => __('Mobile')
+            ],
+            [
+                'value' => 'Home',
+                'label' => __('Home')
+            ],
+            [
+                'value' => 'Office',
+                'label' => __('Office')
+            ]
+        ];
     }
 }

@@ -17,5 +17,6 @@ class SaveToOrder implements ObserverInterface
         $quote = $event->getQuote();
         $order = $event->getOrder();
         $order->setData('delivery_note', $quote->getData('delivery_note'));
+        $order->setData('phone_type', $quote->getData('phone_type'));
     }
 }

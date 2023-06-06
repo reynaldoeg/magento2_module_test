@@ -1,0 +1,11 @@
+<?php $order = $block->getOrder(); ?>
+
+<?php if ($order) : ?>
+    <table class="admin__table-secondary order-information-table">
+        <tr>
+            <th>Phone Type</th>
+            <td><?php echo $order->getPhoneType(); ?></td>
+        </tr>
+    </table>
+<?php endif; ?>
+

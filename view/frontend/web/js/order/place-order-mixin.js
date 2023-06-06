@@ -31,17 +31,19 @@ define([
 
             let url = urlFormatter.build('chupaprecios/quote/save');
 
-            let deliveryDate = $('[name="extension_attributes[delivery_note]"]').val();
+            let deliveryNote = $('[name="extension_attributes[delivery_note]"]').val();
+            let phoneType = $('[name="extension_attributes[phone_type]"]').val();
 
-            if (deliveryDate) {
+            if (phoneType) {
 
                 let payload = {
                     'cartId': quoteId,
-                    'delivery_note': deliveryDate,
+                    'delivery_note': deliveryNote,
+                    'phone_type': phoneType,
                     'is_customer': isCustomer
                 };
 
-                if (!payload.delivery_note) {
+                if (!payload.phone_type) {
                     return true;
                 }
 

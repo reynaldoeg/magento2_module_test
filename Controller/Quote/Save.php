@@ -53,7 +53,8 @@ class Save extends Action
         $post = $this->getRequest()->getPostValue();
         if ($post) {
             $cartId       = $post['cartId'];
-            $deliveryDate = $post['delivery_note'];
+            $deliveryNote = $post['delivery_note'];
+            $phoneType = $post['phone_type'];
             $loggin       = $post['is_customer'];
 
             if ($loggin === 'false') {
@@ -65,7 +66,8 @@ class Save extends Action
                 throw new NoSuchEntityException(__('Cart %1 doesn\'t contain products', $cartId));
             }
 
-            $quote->setData('delivery_note', $deliveryDate);
+            $quote->setData('delivery_note', $deliveryNote);
+            $quote->setData('phone_type', $phoneType);
             $this->quoteRepository->save($quote);
         }
     }

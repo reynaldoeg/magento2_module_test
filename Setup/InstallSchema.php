@@ -26,6 +26,16 @@ class InstallSchema implements InstallSchemaInterface
         );
 
         $installer->getConnection()->addColumn(
+            $installer->getTable('quote'),
+            'phone_type',
+            [
+                'type' => Table::TYPE_TEXT,
+                'nullable' => true,
+                'comment' => 'Phone Type',
+            ]
+        );
+
+        $installer->getConnection()->addColumn(
             $installer->getTable('sales_order'),
             'delivery_note',
             [
@@ -36,12 +46,32 @@ class InstallSchema implements InstallSchemaInterface
         );
 
         $installer->getConnection()->addColumn(
+            $installer->getTable('sales_order'),
+            'phone_type',
+            [
+                'type' => Table::TYPE_TEXT,
+                'nullable' => true,
+                'comment' => 'Phone Type',
+            ]
+        );
+
+        $installer->getConnection()->addColumn(
             $installer->getTable('sales_order_grid'),
             'delivery_note',
             [
                 'type' => Table::TYPE_TEXT,
                 'nullable' => false,
                 'comment' => 'Delivery Note',
+            ]
+        );
+
+        $installer->getConnection()->addColumn(
+            $installer->getTable('sales_order_grid'),
+            'phone_type',
+            [
+                'type' => Table::TYPE_TEXT,
+                'nullable' => true,
+                'comment' => 'Phone Type',
             ]
         );
 

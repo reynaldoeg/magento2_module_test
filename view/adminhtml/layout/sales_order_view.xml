@@ -7,6 +7,11 @@
                        name="customfield_order_attributes"
                        template="ChupaPrecios_TechnicalTest::attributes.phtml" />
             </referenceContainer>
+            <referenceContainer name="extra_customer_info">
+                <block class="ChupaPrecios\TechnicalTest\Block\Adminhtml\Attributes"
+                       name="customfield_phone_order_attributes"
+                       template="ChupaPrecios_TechnicalTest::phone_type.phtml" />
+            </referenceContainer>
         </referenceContainer>
     </body>
 </page>
