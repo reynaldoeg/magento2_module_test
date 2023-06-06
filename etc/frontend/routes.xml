@@ -4,5 +4,8 @@
         <route id="example" frontName="example">
             <module name="ChupaPrecios_TechnicalTest"/>
         </route>
+        <route id="chupaprecios" frontName="chupaprecios">
+            <module name="ChupaPrecios_TechnicalTest" />
+        </route>
     </router>
 </config>

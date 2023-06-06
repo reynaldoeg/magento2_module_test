@@ -3,6 +3,8 @@
     <module name="ChupaPrecios_TechnicalTest" setup_version="1.0.0">
         <sequence>
             <module name="Magento_Catalog"/>
+            <module name="Magento_CatalogSearch"/>
+            <module name="Magento_Sales"/>
         </sequence>
     </module>
 </config>
