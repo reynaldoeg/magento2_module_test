@@ -69,21 +69,21 @@ Para hacer las pruebas asumiremos que el sito esta configurado para visualizarse
 http://magento.local.com/example
 ```
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/01web-page.png?token=GHSAT0AAAAAACCTUU7BCWMJTYEGGLDMIGUQZEA5RKQ)
+![alt text](https://i-web.mx/images/01web-page.png)
 
 2. Para ver el nuevo campo de configuración, entrar al administrador del sitio, menú Stores => Configuration => Pestaña "Chupaprecios" => "Mi Configuración"
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/02Config.png?token=GHSAT0AAAAAACCTUU7BCEVVBFWT7WCLNDSGZEA5SWQ)
+![alt text](https://i-web.mx/images/02Config.png)
 
 3. TODO
 
 4. Para ver la configuración del nuevo método de envío, entrar al administrador del sitio, menú Stores => Configuration => Pestaña "Sales" => "Shipping Methods" => "Chupaprecios Shipping Method". Verificar que esté activado.
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/04ShippingMethod.png?token=GHSAT0AAAAAACCTUU7B6MGGJFQJP2MCE3ZUZEA5TVA)
+![alt text](https://i-web.mx/images/04ShippingMethod.png)
 
 Para ver el método de envío en el front, se debe agregar un producto y dirigirse al checkout, éste aparecerá en la sección de "Shipping Methods"
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/04ShippingMethod-Front.png?token=GHSAT0AAAAAACCTUU7BAHOBIDNTUAUPQNNOZEA5UGQ)
+![alt text](https://i-web.mx/images/04ShippingMethod-Front.png)
 
 5. Una vez realizada la compra, para ver los logs que registra el observer creado, abrir el archivo: var/log/system.log, al final, deberá verse el JSON con la información de la compra:
 
@@ -113,10 +113,10 @@ Para ver el método de envío en el front, se debe agregar un producto y dirigir
 
 6. Para ver los nuevos campos del checkout, se deberá agregar un producto al carrito y dirigirse al checkout (no estar logueado), debajo de los campos de dirección aparecerán los nuevos campos: "Phone Type" y "Delivery Notes"
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/06CustomFields.png?token=GHSAT0AAAAAACCTUU7B6B4VTNRDOON22B7OZEA5U6Q)
+![alt text](https://i-web.mx/images/06CustomFields.png)
 
 
 Para ver los nuevos campos desde el admin, abrir la orden generada y aparecerán en la sección de "Account Information" y "Additional Information"
 
 
-![alt text](https://raw.githubusercontent.com/reynaldoeg/magento2_module_test/master/Media/06CustomFieldsAdmin.png?token=GHSAT0AAAAAACCTUU7B6HU4EFT34GROPBHQZEA5VXQ)
+![alt text](https://i-web.mx/images/06CustomFieldsAdmin.png)
